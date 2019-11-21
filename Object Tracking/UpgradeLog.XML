@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ImageTool">
+</Property><Property Name="솔루션 파일" Value="C:\Users\hs\Desktop\ImageTool\ImageTool.sln">
+</Property><Property Name="사용자 옵션 파일" Value="C:\Users\hs\Desktop\ImageTool\ImageTool.suo">
+</Property><Property Name="Date" Value="2012년 5월 2일 수요일">
+</Property><Property Name="Time" Value="오후 19:02">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ImageTool.sln" Description="파일을 C:\Users\hs\Desktop\ImageTool\ImageTool.sln.old(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="" Source="ImageTool.suo" Description="파일을 C:\Users\hs\Desktop\ImageTool\ImageTool.suo.old(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="ImageTool" Source="ImageTool.vcproj" Description="Converting project file 'C:\Users\hs\Desktop\ImageTool\ImageTool.vcproj'.">
+</Event><Event ErrorLevel="1" Project="ImageTool" Source="ImageTool.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="ImageTool" Source="ImageTool.vcproj" Description="Done converting to new project file 'C:\Users\hs\Desktop\ImageTool\ImageTool.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="ImageTool" Source="ImageTool.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ImageTool.sln" Description="솔루션을 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="" Source="ImageTool.sln" Description="Converted">
+</Event></UpgradeLog>
