@@ -1,7 +1,4 @@
-#include "stdafx.h"
-#include "hm_adaptive_color_find.h"
-#include "ImageTool.h"
-#include "ImageToolDlg.h"
+#include "adaptive_color_find.h"
 #include <stdio.h>
 #include <fstream>
 using namespace std;
@@ -32,7 +29,7 @@ void hm_integral(BYTE** source, int int_img[240][320])
 
 }
 
-//r-g, r-bÀÇ Â÷ÀÌ·Î r ºÎºĞ Ç¥½Ã
+//r-g, r-bì˜ ì°¨ì´ë¡œ r ë¶€ë¶„ í‘œì‹œ
 void draw_red_dif(BYTE** red,BYTE** green,BYTE** blue, BYTE** out){	
 	int r,g,b;
 	for(int i = 0; i < HEIGHT; i++) {
@@ -66,8 +63,8 @@ void draw_yellow_dif(BYTE** red,BYTE** green,BYTE** blue, BYTE** out){
 			r=red[i][j];
 			g=green[i][j];
 			b=blue[i][j];
-			if(min(r,min(g,b)) == b)	//yellowÀÇ °æ¿ì blue°¡ ÃÖ¼ÒÀÌ°í
-				out[i][j]=((r-b+g-b)-abs(r-g))/2;	//r-g°¡ Â÷ÀÌ°¡ °ÅÀÇ ¾ø¾î¾ßÇÔ, /2´Â ³ë¸»¶óÀÌÁî
+			if(min(r,min(g,b)) == b)	//yellowì˜ ê²½ìš° blueê°€ ìµœì†Œì´ê³ 
+				out[i][j]=((r-b+g-b)-abs(r-g))/2;	//r-gê°€ ì°¨ì´ê°€ ê±°ì˜ ì—†ì–´ì•¼í•¨, /2ëŠ” ë…¸ë§ë¼ì´ì¦ˆ
 		}
 	}
 }
@@ -79,8 +76,8 @@ void draw_blue_dif(BYTE** red ,BYTE** green,BYTE** blue, BYTE** out){
 			r=red[i][j];
 			g=green[i][j];
 			b=blue[i][j];
-			if(max(r,max(g,b)) == b)	//blue°¡ ÃÖ´ëÀÌ°í
-				out[i][j]=((b-r)+(b-g)-abs(r-g))/2;	//r-g°¡ Â÷ÀÌ°¡ °ÅÀÇ ¾ø¾î¾ßÇÔ, /2´Â ³ë¸»¶óÀÌÁî
+			if(max(r,max(g,b)) == b)	//blueê°€ ìµœëŒ€ì´ê³ 
+				out[i][j]=((b-r)+(b-g)-abs(r-g))/2;	//r-gê°€ ì°¨ì´ê°€ ê±°ì˜ ì—†ì–´ì•¼í•¨, /2ëŠ” ë…¸ë§ë¼ì´ì¦ˆ
 		}
 	}
 }
