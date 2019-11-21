@@ -1,5 +1,4 @@
 #include <vector>
-#include "stdafx.h"
 #include "featurepoint.h"
 
 #if 1
@@ -36,8 +35,8 @@ void findmatchfeatures(features &fpoints, features &refpoints, mfeatures &matche
 				tmp=fpoints[i].descriptor[k] - refpoints[j].descriptor[k];
 				sum += tmp*tmp;
 			}
-			//diffrences= sqrt(sum);	//·çÆ® ¾º¿ì¸é ¿¬»ê ´À·ÁÁö´Ï±î
-			diffrences= sum; //·çÆ® ±¸Áö¾È¾º¿öµµ µÉµí
+			//diffrences= sqrt(sum);	//ë£¨íŠ¸ ì”Œìš°ë©´ ì—°ì‚° ëŠë ¤ì§€ë‹ˆê¹Œ
+			diffrences= sum; //ë£¨íŠ¸ êµ¬ì§€ì•ˆì”Œì›Œë„ ë ë“¯
 			if(diffrences<small1){
 				small2 = small1;
 				small1 = diffrences;
@@ -47,7 +46,7 @@ void findmatchfeatures(features &fpoints, features &refpoints, mfeatures &matche
 				small2 = diffrences;
 			}
 		}
-		if(small1/small2 < 0.4225)//0.4225)  //¾È¾º¿ì¸é ÀÌ°Å·Î
+		if(small1/small2 < 0.4225)//0.4225)  //ì•ˆì”Œìš°ë©´ ì´ê±°ë¡œ
 		{ 
 			//printf("%f\n", small1);
 			matches.push_back(std::make_pair(fpoints[i], *match));
