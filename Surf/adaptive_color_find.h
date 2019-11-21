@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include <vector>
 
 void draw_yellow_dif(BYTE** red,BYTE** green,BYTE** blue, BYTE** out);
